@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseMoved="#loadChoiceBox" prefHeight="220.0" prefWidth="440.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="38.0" layoutY="93.0" text="ID Movement:" AnchorPane.leftAnchor="38.0" AnchorPane.topAnchor="93.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="ID" layoutX="150.0" layoutY="90.0" maxWidth="1.7976931348623157E308" onMouseClicked="#showID" prefHeight="26.0" prefWidth="240.0" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="90.0" />
+      <Label layoutX="38.0" layoutY="32.0" text="Seleziona il Movimento da eliminare:" AnchorPane.leftAnchor="38.0" AnchorPane.topAnchor="32.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button defaultButton="true" layoutX="150.0" layoutY="150.0" mnemonicParsing="false" onAction="#submit" text="Invio">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="220.0" layoutY="150.0" mnemonicParsing="false" onAction="#cancel" text="Annulla">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<TabPane prefHeight="741.0" prefWidth="930.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unicam.cs.pa.jbudget.javaFX.JavaFXController">
+   <tabs>
+      <Tab text="Home">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0">
+               <children>
+                  <Button defaultButton="true" layoutX="100.0" layoutY="20.0" mnemonicParsing="false" onAction="#addAccount" prefHeight="20.0" prefWidth="170.0" text="Aggiungi Account">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="300.0" layoutY="20.0" mnemonicParsing="false" onAction="#addSingleMovement" prefHeight="20.0" prefWidth="170.0" text="Aggiungi Movimento">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="500.0" layoutY="20.0" mnemonicParsing="false" onAction="#addMultipleMovement" prefHeight="20.0" prefWidth="170.0" text="Aggiungi più Movimenti">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="300.0" layoutY="70.0" mnemonicParsing="false" onAction="#deleteMovement" prefHeight="20.0" prefWidth="170.0" text="Elimina Movimento">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="100.0" layoutY="70.0" mnemonicParsing="false" onAction="#deleteAccount" prefHeight="20.0" prefWidth="170.0" text="Elimina Account">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+                  <Button layoutX="500.0" layoutY="70.0" mnemonicParsing="false" onAction="#deleteTransaction" prefHeight="20.0" prefWidth="170.0" text="Elimina Transazione">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+                  <TableView fx:id="accountTable" layoutX="14.0" layoutY="113.0" maxWidth="1.7976931348623157E308" prefWidth="442.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="150.0">
+                     <columns>
+                        <TableColumn fx:id="accountTableID" maxWidth="1.7976931348623157E308" prefWidth="28.799967765808105" text="ID" />
+                        <TableColumn fx:id="accountTableName" maxWidth="1.7976931348623157E308" prefWidth="71.20003509521484" text="Name" />
+                        <TableColumn fx:id="accountTableDescription" maxWidth="1.7976931348623157E308" prefWidth="101.33333587646484" text="Description" />
+                        <TableColumn fx:id="accountTableOpeningBalance" maxWidth="1.7976931348623157E308" prefWidth="101.06663513183594" text="Opening Balance" />
+                        <TableColumn fx:id="accountTableBalance" maxWidth="1.7976931348623157E308" prefWidth="76.79995727539062" text="Balance" />
+                        <TableColumn fx:id="accountTableType" maxWidth="1.7976931348623157E308" prefWidth="64.0" text="Type" />
+                     </columns>
+                  </TableView>
+                  <TableView fx:id="movementTable" layoutX="469.0" layoutY="109.0" prefWidth="450.0" AnchorPane.bottomAnchor="10.0" AnchorPane.topAnchor="150.0">
+                     <columns>
+                        <TableColumn fx:id="movementID" prefWidth="28.266693472862244" text="ID" />
+                        <TableColumn fx:id="movementValue" prefWidth="59.99996757507324" text="Value" />
+                        <TableColumn fx:id="movementDescription" prefWidth="95.46674346923828" text="Description" />
+                        <TableColumn fx:id="movementType" prefWidth="57.33331298828125" text="Type" />
+                        <TableColumn fx:id="movementDate" prefWidth="74.93328857421875" text="Date" />
+                        <TableColumn fx:id="movementTransaction" prefWidth="71.46673583984375" text="Transazione" />
+                        <TableColumn fx:id="movementAccount" prefWidth="59.99997558593748" text="Account" />
+                     </columns>
+                  </TableView>
+                  <Label layoutX="8.0" layoutY="120.0" text="Tabella degli Account:">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="468.0" layoutY="120.0" text="Tabella dei Movimenti:">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Category">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="15.0" text="Tabella delle Categorie:">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="categoryTable" layoutX="14.0" layoutY="50.0" prefHeight="645.0" prefWidth="422.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="50.0">
+                     <columns>
+                        <TableColumn fx:id="categoryID" prefWidth="40.80001926422119" text="ID" />
+                        <TableColumn fx:id="categoryName" prefWidth="174.39995956420898" text="Name" />
+                        <TableColumn fx:id="categoryDescription" prefWidth="208.00001525878906" text="Description" />
+                     </columns>
+                  </TableView>
+                  <Button defaultButton="true" layoutX="476.0" layoutY="50.0" mnemonicParsing="false" onAction="#addCategory" prefHeight="20.0" prefWidth="200.0" text="Aggiungi Categoria">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="700.0" layoutY="50.0" mnemonicParsing="false" onAction="#deleteCategory" prefHeight="30.0" prefWidth="200.0" text="Elimina Categoria">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="476.0" layoutY="95.0" mnemonicParsing="false" onAction="#addCategoryToMovement" prefHeight="20.0" prefWidth="200.0" text="Aggiungi ad un Movimento">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="476.0" layoutY="140.0" mnemonicParsing="false" onAction="#addCategoryToTransaction" prefHeight="20.0" prefWidth="200.0" text="Aggiungi ad una Transazione">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="700.0" layoutY="95.0" mnemonicParsing="false" onAction="#deleteCategoryToMovement" prefHeight="20.0" prefWidth="200.0" text="Elimina da un Movimento">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="700.0" layoutY="140.0" mnemonicParsing="false" onAction="#deleteCategoryToTransaction" prefHeight="20.0" prefWidth="200.0" text="Elimina da una Transazione">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <TableView fx:id="movementCAT" layoutX="476.0" layoutY="241.0" prefHeight="454.0" prefWidth="442.0">
+                    <columns>
+                      <TableColumn fx:id="movementIDCAT" prefWidth="38.39996337890625" text="ID" />
+                      <TableColumn fx:id="movementValueCAT" prefWidth="64.79998779296875" text="Value" />
+                        <TableColumn fx:id="movementTransactionCAT" prefWidth="82.4000244140625" text="Transazione" />
+                        <TableColumn fx:id="movementCategory" prefWidth="255.19998779296873" text="Categorie" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="476.0" layoutY="202.0" text="Movimenti con delle Categorie:">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="File...">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="savePath" disable="true" layoutX="38.0" layoutY="100.0" prefHeight="26.0" prefWidth="440.0" promptText="Seleziona la cartella dove salvare i dati">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="saveButton" defaultButton="true" layoutX="500.0" layoutY="100.0" mnemonicParsing="false" onAction="#saveData" text="Save">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="importPath" disable="true" layoutX="33.0" layoutY="240.0" prefHeight="26.0" prefWidth="440.0" promptText="Seleziona la cartella da dove importare i dati">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="openButton" layoutX="500.0" layoutY="240.0" mnemonicParsing="false" onAction="#importData" text="Open">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="38.0" layoutY="60.0" text="Salvateggio dei Dati:">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="38.0" layoutY="200.0" text="Import dei Dati:">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Statistiche">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="categoryMapTable" layoutX="495.0" layoutY="160.0" prefHeight="500.0" prefWidth="400.0">
+                    <columns>
+                      <TableColumn fx:id="categoryMapInfo" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="400.0" resizable="false" text="Category" />
+                    </columns>
+                  </TableView>
+                  <Button defaultButton="true" layoutX="500.0" layoutY="45.0" mnemonicParsing="false" onAction="#getStatistic" text="Calcola Statistiche">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+                  <ChoiceBox fx:id="accountChoiceBox" layoutX="220.0" layoutY="47.0" prefHeight="26.0" prefWidth="240.0" />
+                  <Label layoutX="20.0" layoutY="169.0" prefHeight="40.0" prefWidth="330.0" text="Movimento con valore Massimo di tipo CREDITS: ">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="20.0" layoutY="249.0" prefHeight="40.0" prefWidth="330.0" text="Movimento con valore Minimo di tipo CREDITS: ">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="20.0" layoutY="329.0" prefHeight="40.0" prefWidth="330.0" text="Movimento con valore Massimo di tipo DEBITS: ">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="20.0" layoutY="409.0" prefHeight="40.0" prefWidth="330.0" text="Movimento con valore Minimo di tipo DEBITS: ">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="maxMovementCredits" disable="true" layoutX="20.0" layoutY="209.0" prefHeight="26.0" prefWidth="330.0" />
+                  <TextField fx:id="minMovementCredits" disable="true" layoutX="20.0" layoutY="289.0" prefHeight="26.0" prefWidth="330.0" />
+                  <TextField fx:id="maxMovementDebits" disable="true" layoutX="20.0" layoutY="369.0" prefHeight="26.0" prefWidth="330.0" />
+                  <TextField fx:id="minMovementDebits" disable="true" layoutX="20.0" layoutY="449.0" prefHeight="26.0" prefWidth="330.0" />
+                  <Label layoutX="30.0" layoutY="40.0" prefHeight="40.0" text="Seleziona l'Account:">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+   </tabs>
+</TabPane>

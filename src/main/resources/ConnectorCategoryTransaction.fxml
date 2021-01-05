@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseMoved="#loadChoiceBox" prefHeight="270.0" prefWidth="540.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" >
+   <children>
+      <Label layoutX="70.0" layoutY="93.0" text="ID Category:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="IDCategory" layoutX="200.0" layoutY="90.0" onMouseClicked="#showCategoryID" prefHeight="26.0" prefWidth="300.0" />
+      <Label layoutX="26.0" layoutY="29.0" prefHeight="27.0" prefWidth="493.0" text="Seleziona la Categoria da aggiungere ad una Transazione">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button defaultButton="true" layoutX="200.0" layoutY="200.0" mnemonicParsing="false" onAction="#submit" text="Invio">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="270.0" layoutY="200.0" mnemonicParsing="false" onAction="#cancel" text="Annulla">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="70.0" layoutY="140.0" text="ID Transaction:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="IDTransaction" layoutX="200.0" layoutY="137.0" onMouseClicked="#showTransactionID" prefHeight="26.0" prefWidth="300.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane onMouseMoved="#loadChoiceBox" prefHeight="368.0" prefWidth="518.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" >
+   <children>
+          <TextField fx:id="accountName" layoutX="181.0" layoutY="147.0" prefHeight="26.0" prefWidth="302.0" />
+          <Label layoutX="35.0" layoutY="150.0" prefHeight="20.0" prefWidth="110.0" text="Name: *">
+              <font>
+                  <Font size="14.0" />
+              </font>
+          </Label>
+          <Label layoutX="35.0" layoutY="100.0" prefWidth="110.0" text="Account Type: *">
+              <font>
+                  <Font size="14.0" />
+              </font>
+          </Label>
+          <Label layoutX="35.0" layoutY="200.0" prefHeight="20.0" prefWidth="110.0" text="Description:">
+              <font>
+                  <Font size="14.0" />
+              </font>
+          </Label>
+          <Label layoutX="35.0" layoutY="250.0" prefHeight="20.0" prefWidth="130.0" text="Opening Balance: *">
+              <font>
+                  <Font size="14.0" />
+              </font>
+          </Label>
+          <TextField fx:id="accountDescription" layoutX="181.0" layoutY="197.0" prefHeight="26.0" prefWidth="302.0" />
+          <TextField fx:id="accountOpeningBalance" layoutX="181.0" layoutY="247.0" prefHeight="26.0" prefWidth="302.0" promptText="Inserisci il Bilancio Iniziale del Conto (default 0)" />
+          <Button layoutX="256.0" layoutY="311.0" mnemonicParsing="false" onAction="#cancel" text="Annulla">
+              <font>
+                  <Font size="14.0" />
+              </font>
+          </Button>
+          <Button defaultButton="true" layoutX="181.0" layoutY="311.0" mnemonicParsing="false" onAction="#submit" text="Invio">
+              <font>
+                  <Font size="14.0" />
+              </font>
+          </Button>
+      <Label layoutX="377.0" layoutY="295.0" text="* Campo Obbligatorio">
+         <font>
+            <Font name="System Italic" size="11.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="accountType" layoutX="181.0" layoutY="97.0" onMouseClicked="#showAccountType" prefHeight="26.0" prefWidth="302.0" />
+      <Label layoutX="35.0" layoutY="24.0" text="Account da aggiungere:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
